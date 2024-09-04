@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            margin: 0 2px 0 2px;
+            overflow-x: hidden;
+        }
+
+        .flex-container {
+            display: flex;
+            /* background-color: #e8e5f3;
+            align-content: center;
+            border-bottom-left-radius: 42px;
+            border-bottom-right-radius: 42px;
+            padding: 24px 10px 0 10px; */
+            padding: 24px 10px 10px 10px;
+            justify-content: space-between;
+        }
+
+        .item-header1 {
+            height: 35px;
+        }
+
+        .item-header2 {
+            padding-left: 4px;
+        }
+
+        .item-header2-title {
+            font-size: 15px;
+            text-align: right;
+            /* margin: 0; */
+        }
+
+        .item-header2-sub {
+            font-size: 15px;
+            text-align: right;
+            /* margin: 16px 0 26px 0; */
+        }
+
+        .user-id {
+            text-align: right;
+        }
+
+        .current-date {
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .a-info input {
+            scale: 1;
+        }
+
+        .b-info input {
+            scale: 1;
+        }
+
+        p {
+            line-height: 25px;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+        }
+        
+        .title3 {
+            background-color: #b8dcec;
+            padding: 4px;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid #99a3a8;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #b8dcec;
+            padding: 4px;
+        }
+
+        th,
+        td {
+            padding: 6px;
+        }
+
+        th p {
+            font-size: 12px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 12px;
+            margin-right: 0.2rem;
+            line-height: 25px;
+        }
+
+        span {
+            font-size: 12px;
+            line-height: 25px;
+            margin: 0;
+        }
+
+        ol {
+            margin: 0;
+            padding-left: 16px;
+        }
+
+        li {
+            font-size: 12px;
+            line-height: 25px;
+            margin: 0;
+        }
+
+        .acception-form th {
+            font-size: 12px;
+        }
+
+        .acception-form td {
+            font-size: 12px;
+            text-align: center;
+            padding: 24px 0 24px 0;
+        }
+
+        .flex-container2 {
+            display: flex;
+            vertical-align: center;
+            padding: 28px 0 12px 0;
+        }
+
+        .flex-container2 p {
+            margin-left: 24px;
+            font-size: 15px;
+        }
+
+        .term-content {
+            padding: 6px;
+        }
+
+        .term-content-title {
+            font-weight: bold;
+        }
+
+        .ul-dash {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 16px;
+        }
+
+        .ul-dash>li:before {
+            content: "–";
+            /* en dash */
+            position: absolute;
+            margin-left: -1.1em;
+        }
+
+        .ul-plus {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 14px;
+        }
+
+        .ul-plus>li:before {
+            content: "+";
+            /* en dash */
+            position: absolute;
+            margin-left: -1.1em;
+        }
+    </style>
+</head>
+<html>
+
+<body>
+    <div class="header">
+        <div class="flex-container">
+            <img class="item-header1"/>
+           
+        <p class="user-id"><strong> #t24CustomerCode</strong></p>
+        <p class="current-date"><strong>Tôi  </strong></p>
+    </div>
+    <div class="a-info">
+                <div class= "title3">
+                    <p><strong> </strong></p>
+                </div>
+                    <p>Họ và tên: #t24FullName</p>
+                   
+                    <div> 
+                        <span>Giấy tờ tuỳ thân: #t24IdentifiedNumber</span>
+                        <span>Ngày cấp: #t24IdentifiedIssueDate</span>
+                        <span>Nơi cấp: #t24IdentifiedIssueArea</span>
+                       
+                        <p>Địa chỉ đăng ký thường trú/Tạm trú: #t24Address</p>
+                        <p>Nơi ở hiện tại: #t24CurrentAddress</p>
+                        <span>Điện thoại di động: #t24MobileNumber</span>
+                        <span>Email: #t24Email</span>
+                    </div>
+               
+    </div>
+    <div class="b-info">
+                <div class= "title3">
+                    <p><strong></strong></p>
+                </div>
+                 
+                    <p> #inputAccountNumber </p>
+                    <p>#inputTransactionDate </p>
+                    <p>Loại giao dịch: Chuyển tiền nhanh IBFT </p>
+                    <p>Số tiền giao dịch: #inputTransactionAmount </p>
+                    <p>Số tiền tra soát: #inputTracingAmount </p>
+                    <p>Lý do tra soát: #inputReasonTracing </p>
+                    <!-- <input type="checkbox" id="pgd" />
+                    <label for="pgd">Kiểm tra kết quả giao dịch (Đối với trường hợp người nhận chưa nhận được tiền) </label><br />
+                    <input type="checkbox" id="pgd" />
+                    <label for="pgd">Cung cấp chứng từ giao dịch (Đối với trường hợp cần chứng từ để cung cấp cho người nhận) 
+                        gửi tới email: #inputEmail  </label><br />
+                    <input type="checkbox" id="pgd" />
+                    <label for="pgd"> Chuyển khoản nhầm người nhận (Đối với trường hợp chuyển tiền nhầm cho một tài khoản khác) </label><br />
+                    <p>Lưu ý: MB xin phép thông báo kết quả tra soát qua App MBBank hoặc gửi SMS/Email/Gọi điện tới SĐT/ Email KH đăng ký tại MB. </p> -->
+                   
+        <div style="display: flex;flex-direction: row-gap">
+            <div style="width: 50%; text-align: center;">
+                <p>Ngày #day tháng #month năm #year </p>
+                <p style="color:rgb(28,60,206);margin: 0px">KHÁCH HÀNG</p>
+                <!-- <p style="color:rgb(28,60,206);margin: 0px; font-weight:600;margin:0px">(đã giao kết)</p> -->
+                <p>#t24FullName </p>
+            </div>
+            <div style="width: 50%; text-align: center;">
+                <p>Ngày #day tháng #month năm #year </p>
+                <p style="color:rgb(28,60,206);margin: 0px"></p>
+                <p>Đã tiếp nhận thông tin</p>
+            </div>
+        </div>
+    </div>
+   
+    
+    
+</body>
+
+</html>
